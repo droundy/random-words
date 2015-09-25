@@ -1,0 +1,7 @@
+| ./gradlew assembleDebug
+c ~
+c #
+c local.properties
+C .gradle
+C build/intermediates
+C ~/.gradle
