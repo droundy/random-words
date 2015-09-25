@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">WordsActivity</string>
+    <string name="app_name">Random Words</string>
     <string name="randomize">Randomize!</string>
 </resources>
