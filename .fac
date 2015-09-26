@@ -5,3 +5,6 @@ c local.properties
 C .gradle
 C build/intermediates
 C ~/.gradle
+
+| python mkwords.py > src/main/res/values/words.xml
+> src/main/res/values/words.xml

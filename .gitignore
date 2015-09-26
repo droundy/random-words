@@ -4,3 +4,4 @@ local.properties
 
 *~
 *.tum
+src/main/res/values/words.xml
