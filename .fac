@@ -9,3 +9,21 @@ C ~/.gradle
 
 | python mkwords.py > src/main/res/values/words.xml
 > src/main/res/values/words.xml
+
+| mkdir -p src/main/res/drawable-ldpi && inkscape -d 67.5 -e src/main/res/drawable-ldpi/ic_launcher.png src/main/res/drawable-svg/ic_launcher.svg
+c .log
+
+| mkdir -p src/main/res/drawable-mdpi && inkscape -d 90 -e src/main/res/drawable-mdpi/ic_launcher.png src/main/res/drawable-svg/ic_launcher.svg
+c .log
+
+| mkdir -p src/main/res/drawable-hdpi && inkscape -d 120 -e src/main/res/drawable-hdpi/ic_launcher.png src/main/res/drawable-svg/ic_launcher.svg
+c .log
+
+| mkdir -p src/main/res/drawable-xhdpi && inkscape -d 180 -e src/main/res/drawable-xhdpi/ic_launcher.png src/main/res/drawable-svg/ic_launcher.svg
+c .log
+
+| mkdir -p src/main/res/drawable-xxhdpi && inkscape -d 270 -e src/main/res/drawable-xxhdpi/ic_launcher.png src/main/res/drawable-svg/ic_launcher.svg
+c .log
+
+| mkdir -p src/main/res/drawable-xxxhdpi && inkscape -d 360 -e src/main/res/drawable-xxxhdpi/ic_launcher.png src/main/res/drawable-svg/ic_launcher.svg
+c .log
