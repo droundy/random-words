@@ -15,6 +15,7 @@ public class WordsActivity extends Activity
 {
     private Random random;
     private String[] words;
+    private String[] wikipedia;
     private TextView word;
     private TextView old;
 
@@ -28,7 +29,8 @@ public class WordsActivity extends Activity
         setContentView(R.layout.main);
         random = new Random();
         Resources res = getResources();
-        words = res.getStringArray(R.array.words);
+        words = res.getStringArray(R.array.manywords);
+        wikipedia = res.getStringArray(R.array.wikipedia);
         old = (TextView) findViewById(R.id.old_word_text);
         word = (TextView) findViewById(R.id.word_text);
         old.setVisibility(View.GONE);
@@ -43,7 +45,14 @@ public class WordsActivity extends Activity
     /** Called when the user clicks the randomize button */
     public void randomize(View view) {
         // Pick a new random word!
-        int r = random.nextInt(words.length);
+        String w = "";
+        if (random.nextInt(2) == 0) {
+            int r = random.nextInt(words.length);
+            w = words[r];
+        } else {
+            int r = random.nextInt(wikipedia.length);
+            w = wikipedia[r];
+        }
         TextView temp = old;
         old = word;
         word = temp;
@@ -60,7 +69,7 @@ public class WordsActivity extends Activity
                 }
             });
 
-        word.setText(words[r]);
+        word.setText(w);
         word.setAlpha(0f);
         word.setTranslationY(-100);
         word.setTranslationX(0);

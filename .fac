@@ -1,4 +1,5 @@
 | ./gradlew assembleDebug
+< src/main/res/values/words.xml
 c ~
 c #
 c local.properties
