@@ -5,3 +5,5 @@ local.properties
 *~
 *.tum
 src/main/res/values/words.xml
+
+ic_launcher.png
