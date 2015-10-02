@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.CheckBox;
 import android.content.res.Resources;
 
 import android.animation.Animator;
@@ -45,8 +46,17 @@ public class WordsActivity extends Activity
     /** Called when the user clicks the randomize button */
     public void randomize(View view) {
         // Pick a new random word!
+        boolean usewords, usewiki;
+        {
+            CheckBox cb = (CheckBox) findViewById(R.id.checkbox_words);
+            usewords = cb.isChecked();
+        }
+        {
+            CheckBox cb = (CheckBox) findViewById(R.id.checkbox_wiki);
+            usewiki = cb.isChecked();
+        }
         String w = "";
-        if (random.nextInt(2) == 0) {
+        if ((random.nextInt(2) == 0 && usewords) || !usewiki) {
             int r = random.nextInt(words.length);
             w = words[r];
         } else {
